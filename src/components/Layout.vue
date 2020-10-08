@@ -6,7 +6,7 @@
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       color="mygrey"
       height="40px"
-      class="mt-6 mb-2 primary--text text-h4 font-weight-thin"
+      class="mt-6 mb-2 primary--text text-h4 caption"
       
     >
         <span
@@ -24,12 +24,12 @@
             info@example.com
         </span>
         <v-spacer />
-        <span class="ml-5">
-            <v-icon color="primary">mdi-facebook</v-icon>
-            <v-icon color="primary">mdi-instagram</v-icon>
-            <v-icon color="primary">mdi-twitter</v-icon>
-            <v-icon color="primary">mdi-whatsapp</v-icon>
-        </span>
+        <v-card-actions>
+            <v-icon color="primary" small @click="loader = 'loading'">mdi-facebook</v-icon>
+            <v-icon color="primary" small @click="loader = 'loading'" >mdi-instagram</v-icon>
+            <v-icon color="primary" small @click="loader = 'loading'">mdi-twitter</v-icon>
+            <v-icon color="primary" small @click="loader = 'loading'">mdi-whatsapp</v-icon>
+        </v-card-actions>
 
 </v-app-bar>
 
@@ -80,6 +80,7 @@
       <v-btn icon>
         <v-icon>mdi-account-circle</v-icon>
       </v-btn>
+      <v-spacer />
     </v-app-bar>
     <v-content >
       <v-bottom-navigation
@@ -87,16 +88,17 @@
         background-color="primary"
         horizontal
         dark
-        class="pa-md-4 mx-lg-auto pt-6 mb-4"
+        class="pa-md-4 mx-lg-auto pt-6 mb-4 "
       >
         <a href="/" class="v-btn">
-           <v-icon>fas fa-list</v-icon>
-          <span>About us</span>
+          <span class="subheading white--text mr-2">About us</span>
+          <v-icon>mdi-domain</v-icon>
         </a>
-        <v-menu open-on-hover offset-y>
+        <v-menu open-on-hover offset-y class='headline'>
           <template v-slot:activator="{ on }">
             <v-btn v-on="on">
-              <span>Categories</span>
+              <v-icon>mdi-headset</v-icon>
+              <span class="subheading white--text mr-2">Categories</span>
             </v-btn>
           </template>
           <v-card
@@ -117,10 +119,12 @@
           </v-card>
         </v-menu>
         <a href="/blog" class="v-btn">
-          <span>Blog</span>
+          <span class="subheading white--text mr-2">Blog</span>
+          <v-icon>mdi-file</v-icon>
         </a>
         <v-btn href="/blog">
-          <span>Contact Us </span>
+        <v-icon>mdi-email</v-icon>
+          <span class="subheading white--text mr-2">Contact Us </span>
         </v-btn>
       </v-bottom-navigation>
     </v-content>
