@@ -53,7 +53,7 @@
                 :value="1"
                 dense
             ></v-text-field>
-            <v-btn class="primary white--text" outlined tile dense><v-icon>mdi-cart</v-icon> ADD TO CART</v-btn>
+            <v-btn class="info white--text" outlined tile dense><v-icon>mdi-cart</v-icon> ADD TO CART</v-btn>
             <v-btn class="ml-4" outlined tile>ADD TO WISHLIST</v-btn>
 
           </div>

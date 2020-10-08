@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div>
     <v-container>
       <p class="display-3 font-weight-light	text-center pa-4">Best brands for fashion</p>
