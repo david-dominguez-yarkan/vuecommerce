@@ -66,9 +66,9 @@
       <v-spacer />
       <v-btn v-on="on" href="/cart" icon>
         <v-badge
-          content="2"
+          content ="2"
           value="2"
-          color="green"
+          color="info"
           overlap
         >
           <v-icon>mdi-cart</v-icon>
